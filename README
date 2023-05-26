@@ -1,0 +1,6 @@
+
+This folder contains all the codes used for running PathExt.
+
+Inside "test_data" folder, sample input file (input_data) in tsv file format and the protein-protein interaction network (human_PPIN.txt) used in this study is present.
+
+Inside test_folder, we also have another folder named "results". All the output data generated after running PathExt, is present in this folder.
