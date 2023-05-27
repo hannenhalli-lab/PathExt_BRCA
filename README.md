@@ -88,6 +88,15 @@ Code is present in the **"code"** folder
 
 **/usr/local/bin/Rscript boxplot.r**
 
+
+**############################ Creating Barplot #######################################**
+Create a comma separated file to generate barplot. Sample input file is provided "barplot_input.csv"<br>
+Code is present in the **"code"** folder
+
+**Code usage:**
+
+**/usr/local/bin/Rscript barplot.r**
+
 **############################ Creating Heatmap #######################################**
 
 Create a comma separated file to generate heatmap. Sample input file is provided "heatmap_input.csv" and the generated output is a jpg image "Heatmap.jpg"<br>
