@@ -95,4 +95,46 @@ Run the command as
 **/usr/local/bin/Rscript BP_clusterprofiler.r**<br>
 Note that above code can be used to identify molecular functions. User need to change **ont="BP"** to **ont="MF"** <br>
 
+**############################################### Virtual Screening #######################################################**
+
+For virtual screening, we downloaded the 3D structure of the protein from RCSB-PDB database and ligands in SMILES (.smi) format from ZINC database.<br>
+We used AutoDock Vina for virtual screening experiments. The software requires the ligand file in .mol2 file format. Following command was used to convert the ligand from .smi to .mol2 file format using obabel software.
+
+**obabel -i smi mol1 -o mol2 --gen3D -O test.mol2**
+
+Once the ligand was converted into .mol2 file format, we prepared the protein for docking by the following command. This command will select the required chain for docking, and will remove the heteroatoms and unwanted metals from the structure.
+
+**pdb_selchain -A 4qcl.pdb | pdb_delhetatm | pdb_tidy |grep "^ATOM" > 4qcl_processed.pdb**
+
+Once the protein and ligands are ready, we need to convert them for docking. User should download the Autodock Vina software and install it.
+Now we convert the receptor and ligand files into the .pdbqt file format. This file format is used by Vina for docking. Command for the same is
+
+**python /usr/local/apps/Autodock/mgltools/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_ligand4.py -r receptor.pdb -o receptor.pdbqt**<br>
+**python /usr/local/apps/Autodock/mgltools/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_ligand4.py -l ligand.mol2 -o ligand.pdbqt**
+
+After converting it into .pdbwt file format, run the code vina.pl as given below
+
+**vina --config conf.txt --ligand ligand.pdbqt --log ligand_log.out**
+
+This code requires the **"conf.txt file"** where we define the grid size of the box and the coordinates of the protein where we want to dock the ligand. This can be done using UCSF chimera tool.
+
+**Tools and packages used:**<br>
+Python 3.6.9<br>
+R 3.6<br>
+Pandas 0.25.3<br>
+Networkx 1.11<br>
+Numpy 1.17.4<br>
+Random<br>
+Sys<br>
+Math<br>
+ggplot2<br>
+dplyr<br>
+tidyverse<br>
+pheatmap<br>
+loess<br>
+CirGo<br>
+GoSemSim<br>
+openbabel<br>
+AutoDock Vina<br>
+
 
