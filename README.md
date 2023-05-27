@@ -152,6 +152,7 @@ R 3.6<br>
 Pandas 0.25.3<br>
 Networkx 1.11<br>
 Numpy 1.17.4<br>
+Statsmodel<br>
 Random<br>
 Sys<br>
 Math<br>
@@ -160,8 +161,7 @@ dplyr<br>
 tidyverse<br>
 pheatmap<br>
 loess<br>
-CirGo<br>
-GoSemSim<br>
+Clusterprofiler<br>
 openbabel<br>
 AutoDock Vina<br>
 
