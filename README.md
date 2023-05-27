@@ -69,6 +69,15 @@ After generating the topnet file, compute the centrality score of each gene by r
 Next step is sorting the output file on the basis of "ripple_centrality" score and selecting the top required genes.<br>
 We have provided the example ouput file in the **"test_data/results/"** folder for the reader.
 
+
+**############################ Creating Venn Diagram #######################################**
+Create a comma separated file to generate venn diagram. Sample input file is provided "venn_input.csv"<br>
+Code is present in the **"code"** folder
+
+**Code usage:**
+
+**/usr/local/bin/Rscript venn_diag.r**
+
 **############################ Creating Heatmap #######################################**
 
 Create a comma separated file to generate heatmap. Sample input file is provided "heatmap_input.csv" and the generated output is a jpg image "Heatmap.jpg"<br>
