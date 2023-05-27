@@ -35,10 +35,15 @@ The provided code compute value for one sample. User can run the code in loop fo
 2. After running the following commands, select the best values from the output file **"thresh_TopNet_sizes.txt"**. For example, user selected 0.01 as percentile and 0.05 as q-score. Now run the following commands for generating the topnets with user selected pecentile and q-score.
 
 **mkdir test_data/results/temp**<br>
+
 **python node_weight_matrix_colname_Pijs.py test_data/input_data Sample1 test_data/human_PPIN.txt 0.01 2 1000 test_data/results/Activated_response test_data/results/temp/Pij**<br>
+
 **python fdr_rand_pijs_boxcox.py test_data/results/temp test_data/results/Pij_zscores.txt**<br>
+
 **rm -rf test_data/results/temp**<br>
+
 **python benjamini_hochberg_boxcox.py test_data/results/Pij_zscores.txt 0.05 test_data/results/Pij_zscores_fdr.txt**<br>
+
 **python extract_fdr_network.py test_data/results/Activated_response test_data/results/Pij_zscores_fdr.txt 0.05 test_data/results/Activated_Response_TopNet.txt**
 
 Here,
