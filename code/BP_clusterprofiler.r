@@ -2,6 +2,8 @@
 
 library(clusterProfiler)
 library(ggplot2)
+
+### Read input file ####
 de <- read.csv("BP_list", header = TRUE)
 ego <- enrichGO(de$Entrezid, OrgDb = "org.Hs.eg.db", ont="BP", readable = TRUE, keyType = "SYMBOL") ### Use ont="BP" for biological processes, and ont="MF" for molecular functions
 ego2 <- simplify(ego, cutoff=0.8, by="p.adjust", select_fun=min, measure = "Wang")
