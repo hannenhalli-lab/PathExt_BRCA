@@ -59,3 +59,40 @@ h) "results" is the output directory<br>
 i) "thresh_TopNet_sizes.txt" is the output file with all the percentile and q-score threshold.<br>
 j) "Activated_Response" is the file name for base response network (we'll put it in the output directory)<br>
 k) "Activated_Response_TopNet.txt" is the file name for TopNet (we'll put it in the output directory)<br>
+
+**########################## Computing centrality score and top central genes ###########**
+
+After generating the topnet file, compute the centrality score of each gene by running the following command
+
+**python calc_ripple_centrality.py test_data/results/Activated_Response_TopNet.txt test_data/results/Activated_epicenter**
+
+Next step is sorting the output file on the basis of "ripple_centrality" score and selecting the top required genes.<br>
+We have provided the example ouput file in the **"test_data/results/"** folder for the reader.
+
+**############################ Creating Heatmap #######################################**
+
+Create a comma separated file to generate heatmap. Sample input file is provided "heatmap_input.csv" and the generated output is a jpg image "Heatmap.jpg"<br>
+Code is present in the **"code"** folder
+
+**Code usage:**
+
+**/usr/local/bin/Rscript heatmap.r**
+
+**############################ Creating DotPlot #######################################**
+
+Create a comma separated file to generate Dotplot. Sample input file is provided "dotplot_input.csv" and the generated output is a jpg image "Dotplot.jpg"<br>
+Code is present in the **"code"** folder
+
+**Code usage:**
+
+**/usr/local/bin/Rscript dotplot.r**
+
+**############################ Creating Enrichment Plot among GO terms #######################################**
+
+Clusterprofiler package was used for creating enrichment plots among GO terms. Code used is provided in the folder **"code"**
+Run the command as
+
+**/usr/local/bin/Rscript BP_clusterprofiler.r**<br>
+Note that above code can be used to identify molecular functions. User need to change **ont="BP"** to **ont="MF"** <br>
+
+
