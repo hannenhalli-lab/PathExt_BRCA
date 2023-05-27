@@ -78,6 +78,15 @@ Code is present in the **"code"** folder
 
 **/usr/local/bin/Rscript venn_diag.r**
 
+
+**############################ Creating Boxplot #######################################**
+Create a comma separated file to generate boxplot. Sample input file is provided "boxplot_input.csv"<br>
+Code is present in the **"code"** folder
+
+**Code usage:**
+
+**/usr/local/bin/Rscript boxplot.r**
+
 **############################ Creating Heatmap #######################################**
 
 Create a comma separated file to generate heatmap. Sample input file is provided "heatmap_input.csv" and the generated output is a jpg image "Heatmap.jpg"<br>
@@ -104,7 +113,7 @@ Run the command as
 **/usr/local/bin/Rscript BP_clusterprofiler.r**<br>
 Note that above code can be used to identify molecular functions. User need to change **ont="BP"** to **ont="MF"** <br>
 
-**############################################### Virtual Screening #######################################################**
+**########################## Virtual Screening #########################################**
 
 For virtual screening, we downloaded the 3D structure of the protein from RCSB-PDB database and ligands in SMILES (.smi) format from ZINC database.<br>
 We used AutoDock Vina for virtual screening experiments. The software requires the ligand file in .mol2 file format. Following command was used to convert the ligand from .smi to .mol2 file format using obabel software.
