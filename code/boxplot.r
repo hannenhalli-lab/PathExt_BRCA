@@ -1,6 +1,15 @@
 ### Python code ####
 #### Boxplot GC distribution #####
 
+import sys
+import pandas as pd
+import numpy as np
+import seaborn as sns
+from statannot import add_stat_annotation
+from scipy.stats import mannwhitneyu
+import matplotlib.pyplot as plt
+
+#### Read input file ###
 df = pd.read_csv('boxplot_input.csv')
 order = ['PathExt','DEGs']
 
