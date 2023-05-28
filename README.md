@@ -1,5 +1,7 @@
 # PathExt_BRCA
-PathExt tool was applied on TCGA BRCA data to identify subtype-specific genes
+
+**Project Overview**<br>
+Breast cancers exhibit substantial transcriptional heterogeneity, posing a significant challenge to the prediction of treatment response and prognostication of outcomes. Especially, translation of TNBC subtypes to the clinic remains a work in progress, in part because of a lack of clear transcriptional signatures distinguishing the subtypes. Our recent network-based approach, PathExt, demonstrates that global transcriptional changes in a disease context are likely mediated by a small number of key genes, and these mediators may better reflect functional or translationally relevant heterogeneity. We apply PathExt to 1059 BRCA tumors and 112 healthy control samples across 4 subtypes to identify frequent, key-mediator genes in each BRCA subtype. We further implemented PathExt on Single cell transcriptomes of BRCA subtype tumors which revealed a subtype-specific distribution of PathExt-identified genes in multiple cell types from the tumor microenvironment. Next, Application of PathExt to a TNBC chemotherapy response dataset identified TNBC subtype-specific key genes and biological processes associated with resistance. We described putative drugs that target top novel genes potentially mediating drug resistance.
 
 **##################### Instructions for the Users ###################**
 
