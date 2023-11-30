@@ -125,6 +125,14 @@ Run the command as
 **/usr/local/bin/Rscript BP_clusterprofiler.r**<br>
 Note that above code can be used to identify molecular functions. User need to change **ont="BP"** to **ont="MF"** <br>
 
+**#################### Predicting Non-responder using SVM based model ######################**
+
+SVM model was trained on GSE41998 dataset to predict non-responder to a given neoadjuvant chemotherapy using 13 gene signature expression as a feature. User can use this model to predict whether a patient will respond to the treatment or not (positive label classify as non-responder). Input file is provided by the name "ml_test.csv"
+
+**Code usage:**
+**python SVM_predict.py**
+
+
 **########################## Virtual Screening #########################################**
 
 For virtual screening, we downloaded the 3D structure of the protein from RCSB-PDB database and ligands in SMILES (.smi) format from ZINC database.<br>
