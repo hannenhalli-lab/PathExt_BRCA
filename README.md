@@ -73,6 +73,19 @@ We have provided the example ouput file in the **"test_data/results/"** folder f
 
 <br>
 
+**########################## Computing DEGs ###########**
+
+**First Approach**
+For Upregulated genes, compute LogFC of Case/Control and select the genes with LogFC >2 and for Downregulated genes, select the genes with LogFC >-2.
+
+**Second Approach**
+Computing DEGs using DESeq2, run the following command
+
+**/usr/local/bin/Rscript DESeq2.r**
+The input file comprises of raw reads for case and control and metadata file. These files are provided here by the name DESeq2_input and DESeq2_metadata. The code and files are present in the code folder.
+
+<br>
+
 **############################ Creating Venn Diagram #######################################**
 Create a comma separated file to generate venn diagram. Sample input file is provided "venn_input.csv"<br>
 Code is present in the **"code"** folder
