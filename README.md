@@ -74,6 +74,7 @@ We have provided the example ouput file in the **"test_data/results/"** folder f
 <br>
 
 **########################## Computing DEGs ###########**
+
 DEGs in the current study were computed in 2 fashion.
 
 **First Approach**<br>
