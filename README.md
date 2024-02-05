@@ -145,7 +145,7 @@ Note that above code can be used to identify molecular functions. User need to c
 
 **#################### Predicting Non-responder using SVM based model ######################**
 
-SVM model was trained on GSE41998 dataset to predict non-responder to a given neoadjuvant chemotherapy using 13 gene signature expression as a feature. User can use this model to predict whether a patient will respond to the treatment or not (positive label classify as non-responder). Input file is provided by the name "ml_test.csv". Model is provided by the name **TNBC_finalized_model.sav**. All the 3 files (code, test file and model is present in the maiin directory)
+SVM model was trained on GSE41998 dataset to predict non-responder to a given neoadjuvant chemotherapy using 21 gene signature expression as a feature. User can use this model to predict whether a patient will respond to the treatment or not (positive label classify as non-responder). Input file is provided by the name "ml_test.csv". Model is provided by the name **TNBC_finalized_model.sav**. All the 3 files (code, test file and model is present in the maiin directory)
 
 **Code usage:**
 **python SVM_predict.py**
