@@ -81,8 +81,7 @@ For Upregulated genes, compute LogFC of Case/Control and select the genes with L
 **Second Approach**<br>
 Computing DEGs using DESeq2, run the following command
 
-**/usr/local/bin/Rscript DESeq2.r**<br>
-
+**/usr/local/bin/Rscript DESeq2.r**
 The input file comprises of raw reads for case and control and metadata file. These files are provided here by the name DESeq2_input and DESeq2_metadata. The code and files are present in the code folder.
 
 <br>
